@@ -52,10 +52,8 @@ target_link_directories(pbr ${Attribute}    ${CMAKE_BINARY_DIR}/thirdparty/GLAD
                                             ${CMAKE_BINARY_DIR}/thirdparty/ImGui
                                             ${CMAKE_BINARY_DIR}/thirdparty/stb_img)
 target_link_libraries(pbr  ${Attribute} libimgui.dll libglad.dll libstb_image.dll)
-
 target_link_libraries(pbr  ${Attribute} ${CMAKE_SOURCE_DIR}/thirdparty/assimp_5.4/lib/libassimp.dll.a)
 target_link_libraries(pbr  ${Attribute} ${CMAKE_SOURCE_DIR}/thirdparty/glfw/lib-mingw-w64/libglfw3.a)
 
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/GLSL/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/GLSL/)
-

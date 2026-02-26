@@ -3,6 +3,7 @@
 #include "ImGui/imgui_impl_glfw.h"
 #include "ImGui/imgui_impl_opengl3.h"
 #include "ImGuiWrap.h"
+#include <cassert>
 
 
 #define EnableOutPut 0
@@ -14,6 +15,7 @@
 
 void ImGuiWrapper::ImGuiInit(GLFWwindow* win)
 {
+    assert(win);
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();//创建上下文
     ImGuiIO& io = ImGui::GetIO();
