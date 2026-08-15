@@ -1,0 +1,110 @@
+# Blender 4.5.3 LTS MTL File: 'None'
+# www.blender.org
+
+newmtl tank_chassis_01_skinned
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		chassis_albedo.jpg
+map_Ka 		chassis_ao.png
+map_Bump 	chassis_normal.png
+map_Ke 		chassis_metal.png
+map_Ns 		chassis_roughness.png
+
+
+newmtl tank_chassis_01_skinned.001
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		chassis_albedo.jpg
+map_Ka 		chassis_ao.png
+map_Bump 	chassis_normal.png
+map_Ke 		chassis_metal.png
+map_Ns 		chassis_roughness.png
+
+newmtl tank_guns_skinned
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		guns_albedo.jpg
+map_Ka 		guns_ao.png
+map_Bump 	guns_normal.png
+map_Ke 		guns_metal.png
+map_Ns 		guns_roughness.png
+#map_Kd C:/Users/ssmua/AppData/Local/Temp/blender_a20596/vehicles/chinese/Ch01_Type59/Type59_guns_AM_hd.dds
+
+
+newmtl tank_hull_01
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		hull_albedo.jpg
+map_Ka 		hull_ao.png
+map_Bump 	hull_normal.png
+map_Ke 		hull_metal.png
+map_Ns 		hull_roughness.png
+#map_Kd C:/Users/ssmua/AppData/Local/Temp/blender_a20596/vehicles/chinese/Ch01_Type59/Type59_hull_01_AM_hd.dds
+
+newmtl tank_turret_01
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		turret_albedo.jpg
+map_Ka 		turret_ao.png
+map_Bump 	turret_normal.png
+map_Ke 		turret_metal.png
+map_Ns 		turret_roughness.png
+#map_Kd C:/Users/ssmua/AppData/Local/Temp/blender_a20596/vehicles/chinese/Ch01_Type59/Type59_turret_01_AM_hd.dds
+
+newmtl track_mat
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+illum 2
+map_Kd 		track_albedo.jpg
+map_Ka 		track_ao.png
+map_Bump 	track_normal.png
+map_Ke 		track_metal.png
+map_Ns 		track_roughness.png
+
+newmtl track_mat.001
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 		track_albedo.jpg
+map_Ka 		track_ao.png
+map_Bump 	track_normal.png
+map_Ke 		track_metal.png
+map_Ns 		track_roughness.png
