@@ -256,12 +256,14 @@ void DrawType59(RenderPipeline& type59Shader, Devices& device,
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+static const std::string snowRoadPath = "./res/module/snow-road-raw-scan-freebie/Road.obj";
+static const std::string snowRoadTexture_1_PATH = "./res/module/snow-road-raw-scan-freebie/Road_u1_v1.jpg";
 static const std::string bootPath = "./res/module/sh_catWorkBoot_cc/";
 static const std::string type59Path = "./res/module/Type59/";
 static const std::string pistolPath = "./res/module/steampunk-triple-pistol-pbr/";
 // 2_irradianceMap 3_prefilterMap 4_lutTex
-static const std::string goldPath = "./res/pbr/gold/";
-static const std::string grassPath = "./res/pbr/grass/";
+static const std::string goldPath = "./res/PBR/gold/";
+static const std::string grassPath = "./res/PBR/grass/";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -285,15 +287,13 @@ int main()
     cubeMap.LinkShaderProgram("./GLSL/Shadow/model.vs", "./GLSL/Shadow/model.gs",
                               "./GLSL/Shadow/model.fs");
 
-    demoModel snowRoad("./res/module/snow-road-raw-scan-freebie/Road.obj", false,
-                       true);
+    demoModel snowRoad(snowRoadPath, false, true);
     RenderPipeline shadowScene("./GLSL/Shadow/point_shadows.vs",
                                "./GLSL/Shadow/point_shadows.fs");
+
     shadowScene.BindTexture(framebuff.GetTexId(0),
                             LearnGL_tt::TT_TEXTURE_CUBE_MAP);
-    shadowScene.BindTexture(
-        "./res/module/snow-road-raw-scan-freebie/Road_u1_v1.jpg",
-        LearnGL_tt::TT_TEXTURE_2D);
+    shadowScene.BindTexture(snowRoadTexture_1_PATH, LearnGL_tt::TT_TEXTURE_2D);
     shadowScene.SetInt("depthMap", 0);
     shadowScene.SetInt("diffuseTexture", 1);
 

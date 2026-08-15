@@ -4,6 +4,7 @@
 #include "ImGui/imgui_impl_opengl3.h"
 #include "ImGuiWrap.h"
 #include <cassert>
+#include <filesystem>
 
 
 #define EnableOutPut 0
@@ -22,6 +23,7 @@ void ImGuiWrapper::ImGuiInit(GLFWwindow* win)
 #if EnableOutPut
     std::cout << std::filesystem::absolute(simsunPath).string().c_str() << std::endl;
 #endif
+    assert(std::filesystem::exists(simsunPath));
     io.Fonts->AddFontFromFileTTF(simsunPath, 24.0f, nullptr,// 设置字体
                                  io.Fonts->GetGlyphRangesChineseFull());
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;// 允许键盘控制

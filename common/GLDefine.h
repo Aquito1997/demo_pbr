@@ -14,7 +14,7 @@
 #include <map>
 #include <string>
 
-static const char* simsunPath = "./simsun.ttf";
+static const char* simsunPath = "./res/Font/simsun.ttf";
 
 namespace BaseTypeLen
 {

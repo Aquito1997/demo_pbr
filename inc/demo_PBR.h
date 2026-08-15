@@ -21,13 +21,15 @@
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_float4x4.hpp"
 #include "glm/ext/matrix_transform.hpp"
+#include <string>
 #include <sys/types.h>
 #include <vector>
 
 #ifdef _WIN32
 typedef unsigned int uint;
 #endif
-namespace IBL {
+namespace IBL
+{
 
 static const glm::mat4 captureProjection =
     glm::perspective(glm::radians(90.0f), 1.0f, 0.1f, 10.0f);
@@ -72,68 +74,74 @@ static const std::vector<glm::vec3> lightColors = {
     // glm::vec3(1000.0f, 1000.0f, 1000.0f)
 };
 
-void DrawSphere(uint &sphereVAO, uint &indexCount, uint &vbo, uint &ebo);
+void DrawSphere(uint& sphereVAO, uint& indexCount, uint& vbo, uint& ebo);
 
-namespace GenTexture {
-uint LoadHDRTexture(const char *picPath);
+namespace GenTexture
+{
+uint LoadHDRTexture(const std::string& picPath);
+uint LoadHDRTexture(const char* picPath);
 uint GenCubeMapTexture(uint size);
 uint GenIrradianceTexture(uint size);
 uint GenLUTTexture(uint size);
 
-} // namespace GenTexture
+}// namespace GenTexture
 
-namespace GenMap {
+namespace GenMap
+{
 // 加载带HDR的环境贴图作为天空盒子
 //
 // 0_hdrTex
-void GenCubeMap(fbAttri &fb);
+void GenCubeMap(fbAttri& fb);
 
 // PBR HDR立方体贴图
 //
 // 0_hdrTex 1_envMap
-void GenEnvMap(fbAttri &fb);
+void GenEnvMap(fbAttri& fb);
 
 // PBR 漫反射部分光照(立方体贴图卷积)
 //
 // 0_hdrTex 1_envMap 2_irradianceMap
-void GenIrradianceMap(fbAttri &fb);
+void GenIrradianceMap(fbAttri& fb);
 
 // PBR 预滤波HDR环境贴图
 //
 // 0_hdrTex 1_envMap 2_irradianceMap 3_prefilterMap
-void GenPrefilterMap(fbAttri &fb);
+void GenPrefilterMap(fbAttri& fb);
 
 // PBR LUT
 //
 // 0_hdrTex 1_envMap 2_irradianceMap 3_prefilterMap 4_brdfLutMap
-void GenLUTMap(fbAttri &fb);
+void GenLUTMap(fbAttri& fb);
 
-}; // namespace GenMap
+};// namespace GenMap
 
-namespace ImGuiFuncWarpper {
-namespace ImguiCommon {
-void SyncParamater(glm::vec3 &val, float input);
+namespace ImGuiFuncWarpper
+{
+namespace ImguiCommon
+{
+void SyncParamater(glm::vec3& val, float input);
 }
 
-void ImGuiSlideThree(glm::vec3 &val, const std::string &prefix,
-                     const std::string &title, bool enableSyncBtn = false,
+void ImGuiSlideThree(glm::vec3& val, const std::string& prefix,
+                     const std::string& title, bool enableSyncBtn = false,
                      float min = -30, float max = 30);
-void ImGuiScale(glm::vec3 &val, const std::string &prefix,
+void ImGuiScale(glm::vec3& val, const std::string& prefix,
                 bool enableSyncBtn = false, float min = 0, float max = 1);
-void ImGuiTranslate(glm::vec3 &val, const std::string &prefix,
+void ImGuiTranslate(glm::vec3& val, const std::string& prefix,
                     bool enableSyncBtn = false);
-} // namespace ImGuiFuncWarpper
+}// namespace ImGuiFuncWarpper
 
-namespace Shadow {
+namespace Shadow
+{
 static constexpr GLuint sw = 1024, sh = 1024;
 static constexpr GLfloat near_plane = 0.01f, far_plane = 64.0f;
-void ShadowFrameBuff(fbAttri &fb);
-void DepthMap(RenderPipeline &shader, const glm::vec3 &lightPos);
+void ShadowFrameBuff(fbAttri& fb);
+void DepthMap(RenderPipeline& shader, const glm::vec3& lightPos);
 
-void SwitchShadow(RenderPipeline &render);
-void DrawRoad(RenderPipeline &render, demoModel &module, const Devices &device);
-} // namespace Shadow
+void SwitchShadow(RenderPipeline& render);
+void DrawRoad(RenderPipeline& render, demoModel& module, const Devices& device);
+}// namespace Shadow
 
-} // namespace IBL
+}// namespace IBL
 
-#endif //__pbrFunc_H__
+#endif//__pbrFunc_H__

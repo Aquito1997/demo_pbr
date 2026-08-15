@@ -1,0 +1,10 @@
+libdir=/mnt/YS_2TN3000/ArmV8_Code/assimp-5.4.3/x8664_Build/install/lib
+includedir=/mnt/YS_2TN3000/ArmV8_Code/assimp-5.4.3/x8664_Build/install/include
+
+Name: Assimp
+Description: Import various well-known 3D model formats in an uniform manner.
+Version: 5.4.3
+Libs: -L${libdir} -lassimp
+Libs.private: -lstdc++ -lz
+Cflags: -I${includedir}
+
